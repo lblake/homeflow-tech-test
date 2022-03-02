@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { WebpackOptionsApply } from 'webpack';
 
 function App() {
   const [properties, setProperties] = useState([]);
