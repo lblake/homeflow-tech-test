@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate';
-import styles from './paginateProperties.module.css';
+import './paginateProperties.scss';
 
 export default function PaginateProperties({
   changePage,
@@ -17,11 +17,11 @@ export default function PaginateProperties({
         pageCount={pageCount}
         forcePage={pageNumber}
         onPageChange={changePage}
-        nextLinkClassName={styles.nextBtn}
-        containerClassName={styles.paginationBtns}
-        previousLinkClassName={styles.previousBtn}
-        disabledClassName={styles.paginationDisabled}
-        activeClassName={styles.paginationActive}
+        nextLinkClassName="nextBtn"
+        containerClassName="paginationBtns"
+        previousLinkClassName="previousBtn"
+        disabledClassName="paginationDisabled"
+        activeClassName="paginationActive"
       />
     </div>
   );

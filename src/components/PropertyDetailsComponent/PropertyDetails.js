@@ -11,16 +11,16 @@ export default function PropertyDetails() {
   //filteredUsers e.g = [{name: john  email:email@john}]
   const userInfo = filteredUsers.map((user, index) => {
     return (
-      <div className={styles.userItem} key={index}>
-        <p className={styles.userTitle}>
+      <div className="userItem" key={index}>
+        <p className="userTitle">
           Name: {user.name} Email: {user.email}
         </p>
-        <p className={styles.addressInfo}>Address: {user.address.street}</p>
-        <p className={styles.addressInfo}>City: {user.address.city}</p>
-        <p className={styles.addressInfo}>Zip Code: {user.address.zipcode}</p>
-        <p className={styles.addressInfo}>Phone: {user.phone}</p>
-        <p className={styles.addressInfo}>User Name: {user.username}</p>
-        <p className={styles.addressInfo}>Website: {user.website}</p>
+        <p className="addressInfo">Address: {user.address.street}</p>
+        <p className="addressInfo">City: {user.address.city}</p>
+        <p className="addressInfo">Zip Code: {user.address.zipcode}</p>
+        <p className="addressInfo">Phone: {user.phone}</p>
+        <p className="addressInfo">User Name: {user.username}</p>
+        <p className="addressInfo">Website: {user.website}</p>
         <div>
           <Link to={`/`}>Home</Link>
         </div>

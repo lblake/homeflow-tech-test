@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import SearchBar from '../SearchBarComponent/SearchBar';
-import PaginateUsers from '../PaginateUsersComponent/PaginateUsers';
-import styles from './userList.module.css';
+import PaginateProperties from '../PaginatePropertiesComponent/PaginateProperties';
+import './propertyList.scss';
 import { UserContext } from './UserContext';
 
 export default function PropertyList() {
@@ -70,7 +70,7 @@ export default function PropertyList() {
           <label>
             Select the number of users per page
             <select
-              className={styles.userSelect}
+              className="userSelect"
               value={usersPerPage}
               onChange={handleUsersPerPage}
             >
@@ -91,18 +91,18 @@ export default function PropertyList() {
 
       {/* Displays user CSS cards */}
       <h1>User Information</h1>
-      <div className={styles.userWrapper}>
+      <div className="userWrapper">
         {/* Displays a list of filtered users based on what is typed in the search bar */}
         {filteredUser
           .slice(pagesVisited, pagesVisited + usersPerPage)
           .map((user, index) => {
             return (
-              <div className={styles.userItem} key={index}>
-                <p className={styles.userTitle}>
+              <div className="userItem" key={index}>
+                <p className="userTitle">
                   Name: {user.name} Email: {user.email}
                 </p>
-                <div className={styles.userInfo}>
-                  <span className={styles.userInfo}></span>
+                <div className="userInfo">
+                  <span className="userInfo"></span>
                 </div>
                 {/* <Link to={`/user/${user.id}`}>More Info</Link> */}
                 <a href={`/user/${user.id}`}>More Info</a>
@@ -112,7 +112,7 @@ export default function PropertyList() {
       </div>
 
       {/* PaginateUsers component */}
-      <PaginateUsers
+      <PaginateProperties
         users={filteredUser}
         pageCount={pageCount}
         changePage={changePage}

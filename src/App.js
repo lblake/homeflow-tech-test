@@ -1,9 +1,9 @@
 import React from 'react';
 // import { createContext } from 'react';
-import UserList from './components/UserListComponent/UserList';
+import PropertyList from './components/PropertyListComponent/PropertyList';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import UserDetails from './components/UserDetailsComponent/UserDetails';
-import UserProvider from './components/UserListComponent/UserContext';
+import PropertyDetails from './components/PropertyDetailsComponent/PropertyDetails';
+import UserProvider from './components/PropertyListComponent/UserContext';
 
 function App() {
   return (
@@ -11,10 +11,10 @@ function App() {
       <div>
         <UserProvider>
           <Route exact path='/'>
-            <UserList />
+            <PropertyList />
           </Route>
           <Route exact path='/user/:userId'>
-            <UserDetails />
+            <PropertyDetails />
           </Route>
         </UserProvider>
       </div>
