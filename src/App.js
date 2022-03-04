@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+// import { createContext } from 'react';
+import UserList from './components/UserListComponent/UserList';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import UserDetails from './components/UserDetailsComponent/UserDetails';
+import UserProvider from './components/UserListComponent/UserContext';
 
 function App() {
-  const [properties, setProperties] = useState([]);
-
-  useEffect(() => {
-    fetch('/api/properties?location=brighton')
-      .then((response) => response.json())
-      .then((json) => {
-        setProperties(json.result.properties.elements);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
-
-  console.log('My api values');
-  console.log(properties);
-
-  return <div>App</div>;
+  return (
+    <Router>
+      <div>
+        <UserProvider>
+          <Route exact path='/'>
+            <UserList />
+          </Route>
+          <Route exact path='/user/:userId'>
+            <UserDetails />
+          </Route>
+        </UserProvider>
+      </div>
+    </Router>
+  );
 }
-
 export default App;
