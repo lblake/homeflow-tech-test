@@ -1,14 +1,17 @@
 import React from 'react';
 // import { createContext } from 'react';
 import PropertyList from './components/PropertyListComponent/PropertyList';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PropertyDetails from './components/PropertyDetailsComponent/PropertyDetails';
 import UserProvider from './components/PropertyListComponent/UserContext';
+import { Fragment } from 'react/cjs/react.production.min';
 
 function App() {
   return (
-    <Router>
-      <div>
+    
+    <div>
+     <Routes>
+      <React.Fragment>
         <UserProvider>
           <Route exact path='/'>
             <PropertyList />
@@ -17,8 +20,11 @@ function App() {
             <PropertyDetails />
           </Route>
         </UserProvider>
+        </React.Fragment>
+        </Routes>
       </div>
-    </Router>
+      
+    
   );
 }
 export default App;
