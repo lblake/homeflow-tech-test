@@ -8,11 +8,9 @@ import { Fragment } from 'react/cjs/react.production.min';
 
 function App() {
   return (
-    
     <div>
-     <Routes>
-      <React.Fragment>
-        <UserProvider>
+    <Routes>
+      <UserProvider>
           <Route exact path='/'>
             <PropertyList />
           </Route>
@@ -20,11 +18,8 @@ function App() {
             <PropertyDetails />
           </Route>
         </UserProvider>
-        </React.Fragment>
-        </Routes>
-      </div>
-      
-    
+    </Routes>
+    </div>
   );
 }
 export default App;
