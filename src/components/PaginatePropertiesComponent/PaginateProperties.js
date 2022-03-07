@@ -15,7 +15,7 @@ export default function PaginateProperties({
         previousLabel={'Previous'}
         user={filteredUser}
         pageCount={pageCount}
-        forcePage={pageNumber}
+        // forcePage={pageNumber}
         onPageChange={changePage}
         nextLinkClassName="nextBtn"
         containerClassName="paginationBtns"

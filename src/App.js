@@ -8,18 +8,23 @@ import { Fragment } from 'react/cjs/react.production.min';
 
 function App() {
   return (
-    <div>
+    // <div>
+      <Router>
     <Routes>
-      <UserProvider>
-          <Route exact path='/'>
-            <PropertyList />
+      
+          <Route path='/' element={
+          <UserProvider>
+          <PropertyList />
+          </UserProvider>
+          }>
+
+          <Route path='/user/:userId' element={<PropertyDetails />}/>
+            
           </Route>
-          <Route exact path='/user/:userId'>
-            <PropertyDetails />
-          </Route>
-        </UserProvider>
+        
     </Routes>
-    </div>
+    </Router>
+    // </div>
   );
 }
 export default App;

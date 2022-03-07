@@ -55,7 +55,7 @@ export default function PropertyList() {
       setFilteredUser(newFilter);
     }
   };
-  console.log(usersPerPage);
+  console.log("This is the number of pages", usersPerPage);
   console.log(typeof usersPerPage);
   return (
     //SearchBar component
