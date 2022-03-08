@@ -17,3 +17,4 @@ get '/api/properties' do
   content_type :json
   JSON.parse(api_response.body).to_json
 end
+

@@ -68,7 +68,7 @@ export default function PropertyList() {
       <div>
         <form>
           <label>
-            Select the number of users per page
+            Select the number of properies per page
             <select
               className="userSelect"
               value={usersPerPage}
@@ -90,7 +90,7 @@ export default function PropertyList() {
       </div>
 
       {/* Displays user CSS cards */}
-      <h1>User Information</h1>
+      <h1>Property Details</h1>
       <div className="userWrapper">
         {/* Displays a list of filtered users based on what is typed in the search bar */}
         {filteredUser
@@ -99,13 +99,14 @@ export default function PropertyList() {
             return (
               <div className="userItem" key={index}>
                 <p className="userTitle">
-                  Name: {user.name} Email: {user.email}
+                  Address: {user.display_address} Price: {user.price}
+                  Bedrooms: {user.bedrooms}
                 </p>
                 <div className="userInfo">
                   <span className="userInfo"></span>
                 </div>
-                {/* <Link to={`/user/${user.id}`}>More Info</Link> */}
-                <a href={`/user/${user.id}`}>More Info</a>
+                {/* <Link to={`/user/${user.branch_id}`}>More Info</Link> */}
+                <a href={`/user/${user.property_id}`}>More Info</a>
               </div>
             );
           })}

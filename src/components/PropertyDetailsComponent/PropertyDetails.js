@@ -13,14 +13,16 @@ export default function PropertyDetails() {
     return (
       <div className="userItem" key={index}>
         <p className="userTitle">
-          Name: {user.name} Email: {user.email}
+          {/* Name: {user.name} Email: {user.email} */}
+          Address: {user.display_address} Price: {user.price}
+
         </p>
-        <p className="addressInfo">Address: {user.address.street}</p>
-        <p className="addressInfo">City: {user.address.city}</p>
-        <p className="addressInfo">Zip Code: {user.address.zipcode}</p>
-        <p className="addressInfo">Phone: {user.phone}</p>
-        <p className="addressInfo">User Name: {user.username}</p>
-        <p className="addressInfo">Website: {user.website}</p>
+        {/* <p className="addressInfo">Address: {user.address.street}</p> */}
+        <p className="addressInfo">City: {user.town}</p>
+        <p className="addressInfo">Post Code: {user.postcode}</p>
+        <p className="addressInfo">Status: {user.short_description}</p>
+        <p className="addressInfo">Bathrooms: {user.bathrooms}</p>
+        {/* <p className="addressInfo">Website: {user.website}</p> */}
         <div>
           <Link to={`/`}>Home</Link>
         </div>
