@@ -18,3 +18,6 @@ get '/api/properties' do
   JSON.parse(api_response.body).to_json
 end
 
+get '/*' do
+  send_file 'public/index.html'
+end
