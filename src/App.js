@@ -14,10 +14,10 @@ function App() {
           <PropertyList />
           </UserProvider>
           }>
+          </Route>
 
           <Route path='/user/:userId' element={<PropertyDetails />}/>
-            
-          </Route>
+                  
         
     </Routes>
     </Router>

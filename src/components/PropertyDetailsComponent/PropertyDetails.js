@@ -1,4 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { useParams } from 'react-router-dom';
+import { UserContext } from '../PropertyListComponent/UserContext';
+import { Link } from 'react-router-dom';
+
+import '../PropertyListComponent/propertyList.scss';
+
 
 export default function PropertyDetails() {
   const { users } = useContext(UserContext);
