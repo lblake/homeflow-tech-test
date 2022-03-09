@@ -6,21 +6,14 @@ import UserProvider from './components/PropertyListComponent/UserContext';
 
 function App() {
   return (
-    <Router>
-    <Routes>
-      
-          <Route path='/' element={
-          <UserProvider>
-          <PropertyList />
-          </UserProvider>
-          }>
-          </Route>
-
+  <Router>
+    <UserProvider>
+      <Routes>
+          <Route path='/' element={<PropertyList />}/>
           <Route path='/user/:userId' element={<PropertyDetails />}/>
-                  
-        
-    </Routes>
-    </Router>
+      </Routes>
+    </UserProvider>
+  </Router>
   );
 }
 export default App;
