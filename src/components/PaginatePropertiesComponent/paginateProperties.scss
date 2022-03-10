@@ -12,17 +12,18 @@
   padding: 10px;
   margin: 8px;
   border-radius: 5px;
-  border: 2px solid grey;
-  color: grey;
+  border: 2px solid mediumturquoise;
+  color: mediumturquoise;
   cursor: pointer;
 }
 
 .paginationBtns a:hover {
   color: white;
-  background-color: grey;
+  background-color: steelblue;
 }
 
 .paginationActive a {
   color: white;
-  background-color: grey;
+  background-color: steelblue;
+
 }

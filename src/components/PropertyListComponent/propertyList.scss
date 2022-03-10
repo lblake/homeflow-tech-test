@@ -1,14 +1,15 @@
 body {
-  background-color: #e2e0e0;
+  background-color: steelblue;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 h1 {
   font-weight: 700;
   display: inline-block;
-  border: solid 5px grey;
+  border: solid 5px mediumturquoise;
   padding-left: 5px;
   padding-right: 5px;
+  color: #fff;
 }
 div {
   text-align: center;
@@ -19,7 +20,9 @@ a {
 /* .selectLabel {
   padding-bottom: 50px;
 } */
-
+label{
+  color:#fff
+}
 .userSelect {
   display: block;
   margin: 0 auto;
@@ -28,7 +31,9 @@ a {
 .userSelection {
   font-weight: 700;
   display: inline-block;
-  border: solid 5px grey;
+  // border: solid 5px grey;
+  border: solid 5px mediumturquoise;
+
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -46,14 +51,18 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  // background-color: #000;
+  background-color:sandybrown;
+
   color: #fff;
   margin: 5px auto;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   width: 18rem;
   border-radius: 20px;
-  border: solid 5px grey;
+  // border: solid 5px grey;
+  border: solid 5px mediumturquoise;
+
   transition: 0.5s ease;
 }
 
